@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Number Generator</title>
+        <style>
+            body{
+                text-align: center;
+                background-image: url("https://www.ikea.com/us/en/images/products/flisat-childrens-table__0735831_pe740206_s5.jpg");
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <input id="maxnum" type="number" placeholder="Enter max number"> <br> -->
+        <!-- <input id="minnum" type="number" placeholder="Enter min number"> <br> -->
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <button id="submit" type="button"> Generate</button><br>
+        <h1 id="output"></h1>
+        <script>
+            document.getElementById("submit").onclick= function () {
+           //     let maxnum=document.getElementById("maxnun").value;
+           //     let minnum=document.getElementById("minun").value;
+           //     let output=document.getElementById("output");
+                let tablenum = Math.floor(Math.random() * 7);
+                if(tablenum<1){
+                    tablenum=1;
+                }
+                alert("table "+ tablenum +" gets to go");
+            }
+        </script>
+    </body>
+</html>
