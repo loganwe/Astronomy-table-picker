@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Table Picker</title>
+
         <link rel="icon" type="image" href="https://sethrolland.com/wp-content/uploads/2015/07/Corona-dining-table.jpg">
         <style>
             body{
@@ -11,21 +12,37 @@
         </style>
     </head>
     <body>
-        <!-- <input id="maxnum" type="number" placeholder="Enter max number"> <br> -->
-        <!-- <input id="minnum" type="number" placeholder="Enter min number"> <br> -->
         <br><br><br><br><br><br><br><br><br><br><br><br><br>
         <button id="submit" type="button"> Generate</button><br>
         <h1 id="output"></h1>
         <script>
+                let one=false;
+                let two=false;
+                let three=false;
+                let four=false;
+                let five=false;
+                let six=false;
+                let seven=false;
             document.getElementById("submit").onclick= function () {
-           //     let maxnum=document.getElementById("maxnun").value;
-           //     let minnum=document.getElementById("minun").value;
-           //     let output=document.getElementById("output");
+               let output=document.getElementById("output");
                 let tablenum = Math.floor(Math.random() * 7);
                 if(tablenum<1){
                     tablenum=7;
                 }
-                alert("table "+ tablenum +" gets to go");
+                if(one&&two&&three&&four&&five&&six&&seven){
+                    output.innerHTML="All tables have gone";
+                }else{
+                    output.innerHTML="table "+tablenum+" gets to go";
+                }
+                switch(tablenum){
+                    case 1:one=true;break;
+                    case 2:two=true;break;
+                    case 3:three=true;break;
+                    case 4:four=true;break;
+                    case 5:five=true;break;
+                    case 6:six=true;break;
+                    case 7:seven=true;break;
+                }
             }
         </script>
     </body>
