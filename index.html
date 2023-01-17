@@ -23,7 +23,9 @@
                 let five=false;
                 let six=false;
                 let seven=false;
+                let done=false
             document.getElementById("submit").onclick= function () {
+                if(!done){
                let output=document.getElementById("output");
                 let tablenum = Math.floor(Math.random() * 7);
                 if(tablenum<1){
@@ -31,6 +33,9 @@
                 }
                 if(one&&two&&three&&four&&five&&six&&seven){
                     output.innerHTML="All tables have gone";
+                    document.getElementById("submit").innerHTML="Reset";
+                    done=true;
+
                 }else{
                     output.innerHTML="table "+tablenum+" gets to go";
                 }
@@ -43,7 +48,10 @@
                     case 6:six=true;break;
                     case 7:seven=true;break;
                 }
+            }else{
+                document.location.reload();
             }
+        }
         </script>
     </body>
 </html>
